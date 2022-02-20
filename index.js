@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
-
+const port = process.env.PORT || 3000;
 
 app.use(express.static('static'));
 
-
-app.listen(3000, function() {
-    console.log('Rodando aplicação Cabelo na régua');
+app.listen(port, function() {
+    console.log('Rodando aplicação Cabelo na régua, porta: ' + port);
 });
